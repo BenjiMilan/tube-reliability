@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: tube
+      POSTGRES_PASSWORD: tube
+      POSTGRES_DB: tube
+    ports:
+      - "5432:5432"
+    volumes:
+      - ${HOME}/.local/share/tube-reliability/postgres:/var/lib/postgresql/data
